@@ -1,17 +1,19 @@
- import React, { PureComponent } from 'react';
- import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+ import React, { Component } from 'react';
+ import {BrowserRouter, Router, HashRouter, Switch, Route, Navigate} from 'react-router-dom';
  import Login from './pages/Login';
- 
- class App extends PureComponent {
+ import Register from './pages/Register';
+
+ class App extends Component {
    render(){
      return(
-       <Router>
-       <div>
+       <BrowserRouter>
        <Switch>
-       <Route path="/" exact component={Login} />
+       <Route exact path="/" component={Login} />
+       <Route path="/login" component={Login} />
+       <Route path="/register" component={Register} />
        </Switch>
-       </div>
-     </Router>
+
+     </BrowserRouter>
      )
    }
  }
