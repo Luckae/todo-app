@@ -45,7 +45,7 @@ class Register extends Component {
     }
   }
 
-  doRegister = () => {
+  doRegister = async () => {
     const { username, email, password } = this.state;
     this.setState({isLoading: true, isDisabled: true})
     let req = {
@@ -61,7 +61,7 @@ class Register extends Component {
 
       }),
     };
-    fetch(`${baseUrl}register`, req)
+    await fetch(`${baseUrl}appAcademy/register`, req)
       .then((response) => response.json())
       .then((responseJson) => {
         // console.warn(responseJson);

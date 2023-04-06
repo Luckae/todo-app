@@ -1,3 +1,3 @@
-const baseUrl = "https://robinsonakpuafoundation.org/appAcademy/"
+const baseUrl = "https://robinsonakpuafoundation.org/"
 
 export { baseUrl }

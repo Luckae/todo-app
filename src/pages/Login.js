@@ -38,7 +38,7 @@ class Login extends Component {
     }
   }
 
-  doLogin = () => {
+  doLogin = async () => {
     const { email, password } = this.state;
     this.setState({isLoading: true, isDisabled: true})
     let req = {
@@ -53,7 +53,7 @@ class Login extends Component {
 
       }),
     };
-    fetch(`${baseUrl}login`, req)
+    await fetch(`${baseUrl}appAcademy/login`, req)
       .then((response) => response.json())
       .then((responseJson) => {
         // console.warn(responseJson);
@@ -98,7 +98,7 @@ class Login extends Component {
       <div className="row">
         <div className="col-md-6 offset-md-3">
           <h2 className="text-center text-dark mt-5">Account Login</h2>
-          <div class="text-center mb-5 text-dark">App Academy</div>
+          <div className="text-center mb-5 text-dark">App Academy</div>
           <div className="card my-5">
 
             <form className="card-body cardbody-color p-lg-5">
