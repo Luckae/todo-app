@@ -7,7 +7,7 @@
  class App extends Component {
    render(){
      return(
-       <BrowserRouter>
+       <HashRouter>
        <Switch>
        <Route exact path="/" component={Login} />
        <Route path="/login" component={Login} />
@@ -15,7 +15,7 @@
        <Route path="/todo" component={Todo} />
        </Switch>
 
-     </BrowserRouter>
+     </HashRouter>
      )
    }
  }
